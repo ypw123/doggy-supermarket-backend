@@ -6,8 +6,11 @@ import {
   getAdminTable,
   renderAdminPage
 } from "../controllers/admin.controller.js";
+import { requireAdminAuth } from "../middleware/adminAuth.js";
 
 export const adminRouter = Router();
+
+adminRouter.use(requireAdminAuth);
 
 adminRouter.get("/", renderAdminPage);
 adminRouter.get("/api/summary", getAdminSummary);
