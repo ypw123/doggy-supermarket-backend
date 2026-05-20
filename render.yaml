@@ -25,5 +25,5 @@ databases:
   - name: pawberry-db
     databaseName: pawberry
     user: pawberry
-    plan: basic-256mb
+    plan: free
     region: singapore
